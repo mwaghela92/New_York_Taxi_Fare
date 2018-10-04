@@ -34,7 +34,7 @@ print ('Total time to read data: ' + str(round(end_time - read_time, 2))+' s')
 print('\n\n\nPreprocessing started.....')
 prep_start = time.time()
 
-#removing rows with fare less than minimum fare valur for ride i.e. 2.5...
+#removing rows with fare less than minimum fare valur for ride i.e. 2.5
 df = df[df['fare_amount'] > 2.5]
 
 df_test = pd.read_csv('/Users/mayur/Documents/GitHub/New_York_Taxi_Fare/Data/test.csv')
@@ -204,17 +204,7 @@ def JFK_related(df):
         else:
             dist_dropoff_jfk2.append(0)
         nw_drop.append(y2)
-        
-            
-            
-    """       
-    df['pickup_JFK'] = dist_pickup_jfk
-    df['dropoff_JFK'] = dist_dropoff_jfk
-    df['pickup_LAG'] = dist_pickup_jfk1
-    df['dropoff_LAG'] = dist_dropoff_jfk1
-    df['pickup_NEW'] = dist_pickup_jfk2
-    df['dropoff_NEW'] = dist_dropoff_jfk2
-    """
+
     df['pickup_JFK1'] = jfk_pickup
     df['dropoff_JFK1'] = jfk_drop
     df['pickup_LAG1'] = lg_pickup
